@@ -26,6 +26,11 @@
       g.roll(pins);
   }
   
+  function rollSpare () {
+    g.roll(5);
+    g.roll(5);
+  }
+  
   new Test.Unit.Runner({
     
     setup: function() {
@@ -43,8 +48,7 @@
     }},
     
     testOneSpare: function () { with (this) {
-      g.roll(5);
-      g.roll(5);
+      rollSpare();
       g.roll(3);
       rollMany(17, 0);
       assertEqual(16, g.score());
