@@ -70,8 +70,11 @@
   }); 
   
   new Test.Unit.Runner({
-    test: function () { with (this) {
-      
+    testZeroFrame: function () { with (this) {
+      var f = new Frame();
+      f.roll(0);
+      f.roll(0);
+      assert(!f.isSpare());
     }}
   }, { log: 'testlog-frame' });
   

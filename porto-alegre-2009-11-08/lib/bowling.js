@@ -28,3 +28,19 @@ var Game = function() {
     }
   }
 };
+
+var Frame = function () {
+  var rolls = [];
+  return {
+    roll: function(pins) {
+      rolls.push(pins);
+    },
+    
+    isSpare: function() {
+      var frame_score = 0;
+      for (var i=0; i < rolls.length; i++)
+        frame_score += rolls[i]
+      return frame_score === 10
+    }
+  }
+}
