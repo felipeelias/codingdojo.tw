@@ -13,9 +13,10 @@
 <div id="content">
   <div id="header">
     <h1>JavaScript unit test file</h1>
-    <p>This file tests <strong>example_library_to_test.js</strong>.</p>
+    <p>This file tests <strong>bowling.js</strong>.</p>
   </div>
   <div id="testlog"></div>
+  <div id="testlog-frame"></div>
   <div id="sample"></div>
 </div>
 
@@ -67,6 +68,13 @@
     }}
     
   }); 
+  
+  new Test.Unit.Runner({
+    test: function () { with (this) {
+      
+    }}
+  }, { log: 'testlog-frame' });
+  
 // ]]>
 </script>
 </body>
