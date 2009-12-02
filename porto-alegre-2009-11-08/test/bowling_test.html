@@ -91,7 +91,12 @@
       f.roll(5);
       f.roll(5);
       assert(f.isSpare());
-    }}
+    }},
+    
+    testStrike: function () { with (this) {
+      f.roll(10);
+      assert(f.isStrike());
+    }},
     
   }, { log: 'testlog-frame' });
   

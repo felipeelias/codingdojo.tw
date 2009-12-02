@@ -41,6 +41,10 @@ var Frame = function () {
       for (var i = 0; i < rolls.length; i++)
         frame_score += rolls[i];
       return frame_score === 10
+    },
+    
+    isStrike: function() {
+      return rolls[0] === 10;
     }
   }
 }
