@@ -52,7 +52,16 @@
       g.roll(3);
       rollMany(17, 0);
       assertEqual(16, g.score());
+    }},
+    
+    testOneStrike: function () { with (this) {
+      g.roll(10);
+      g.roll(3);
+      g.roll(4);
+      rollMany(17, 0);
+      assertEqual(24, g.score());
     }}
+    
   }); 
 // ]]>
 </script>
