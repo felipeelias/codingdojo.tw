@@ -38,8 +38,8 @@ var Frame = function () {
     
     isSpare: function() {
       var frame_score = 0;
-      for (var i=0; i < rolls.length; i++)
-        frame_score += rolls[i]
+      for (var i = 0; i < rolls.length; i++)
+        frame_score += rolls[i];
       return frame_score === 10
     }
   }

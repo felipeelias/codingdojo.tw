@@ -75,7 +75,22 @@
       f.roll(0);
       f.roll(0);
       assert(!f.isSpare());
+    }},
+    
+    testNormalFrame: function () { with (this) {
+      var f = new Frame();
+      f.roll(0);
+      f.roll(5);
+      assert(!f.isSpare());
+    }},
+    
+    testSpareFrame: function () { with (this) {
+      var f = new Frame();
+      f.roll(5);
+      f.roll(5);
+      assert(f.isSpare());
     }}
+    
   }, { log: 'testlog-frame' });
   
 // ]]>
