@@ -24,6 +24,9 @@
   new Test.Unit.Runner({
     testBowlingGame: function() { with(this) {
       var g = new Game();
+      for (var i = 1; i <= 20; i++)
+        g.roll(0);
+      assertIdentical(0, g.score());
     }},
   }); 
 // ]]>
