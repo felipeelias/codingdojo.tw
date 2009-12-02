@@ -1,11 +1,13 @@
 var Game = function() {
+  var score = 0;
+  
   return {
     roll: function(pins) {
-      
+      score += pins;
     },
     
     score: function() {
-      return 0;
+      return score;
     }
   }
 };
