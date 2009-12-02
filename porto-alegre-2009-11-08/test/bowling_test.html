@@ -21,19 +21,25 @@
 
 <script type="text/javascript">
 // <![CDATA[
+  function rollMany(times, pins) {
+    for (var i = 1; i <= times; i++)
+      g.roll(pins);
+  }
+  
   new Test.Unit.Runner({
+    
+    setup: function() {
+      g = new Game();
+    },
+    
     testBowlingGame: function() { with(this) {
-      var g = new Game();
-      for (var i = 1; i <= 20; i++)
-        g.roll(0);
+      rollMany(20, 0);
       assertIdentical(0, g.score());
     }},
     
     testAllOnes: function () { with (this) {
-      var g = new Game();
-      for (var i = 1; i <= 20; i++)
-        g.roll(1);
-      assertIdentical(20, g.score());      
+      rollMany(20, 1);
+      assertIdentical(20, g.score());
     }},
     
   }); 
