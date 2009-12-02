@@ -40,8 +40,16 @@
     testAllOnes: function () { with (this) {
       rollMany(20, 1);
       assertIdentical(20, g.score());
-    }},
+    }}/*,
     
+    testOneSpare: function () { with (this) {
+      g.roll(5);
+      g.roll(5);
+      g.roll(3);
+      rollMany(17, 0);
+      assertEqual(16, g.score());
+    }},
+    */
   }); 
 // ]]>
 </script>
